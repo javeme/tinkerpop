@@ -394,11 +394,10 @@ public final class ElementHelper {
      * @return true if elements and equal and false otherwise
      */
     public static boolean areEqual(final Element a, final Object b) {
-        if (null == b || null == a)
-            return false;
-
         if (a == b)
             return true;
+        if (null == b || null == a)
+            return false;
         if (!((a instanceof Vertex && b instanceof Vertex) ||
                 (a instanceof Edge && b instanceof Edge) ||
                 (a instanceof VertexProperty && b instanceof VertexProperty)))
@@ -471,11 +470,10 @@ public final class ElementHelper {
      * @return true if equal and false otherwise
      */
     public static boolean areEqual(final Property a, final Object b) {
-        if (null == b || null == a)
-            return false;
-
         if (a == b)
             return true;
+        if (null == b || null == a)
+            return false;
         if (!(b instanceof Property))
             return false;
         if (!a.isPresent() && !((Property) b).isPresent())

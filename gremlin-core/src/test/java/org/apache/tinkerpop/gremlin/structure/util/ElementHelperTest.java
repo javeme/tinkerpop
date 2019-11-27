@@ -277,8 +277,8 @@ public class ElementHelperTest {
     }
 
     @Test
-    public void shouldDetermineElementsAreNotEqualWhenBothNull() {
-        assertFalse(ElementHelper.areEqual((Element) null, null));
+    public void shouldDetermineElementsAreEqualWhenBothNull() {
+        assertTrue(ElementHelper.areEqual((Element) null, null));
     }
 
     @Test
@@ -312,8 +312,8 @@ public class ElementHelperTest {
     }
 
     @Test
-    public void shouldDeterminePropertiesAreNotEqualBecauseBothAreNull() {
-        assertFalse(ElementHelper.areEqual((Property) null, null));
+    public void shouldDeterminePropertiesAreEqualBecauseBothAreNull() {
+        assertTrue(ElementHelper.areEqual((Property) null, null));
     }
 
     @Test
